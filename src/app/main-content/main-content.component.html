@@ -1,0 +1,19 @@
+<div class="container">
+    <p [@myAnimation]='state' (click)="animate()">Click to see the animation</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let user of userDetails" >
+          <td>{{user.firstname}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
