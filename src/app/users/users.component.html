@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="user-details" *ngIf="user; else noData">
+    <div class="user-image">
+        <img [src]="defaultImagePath" class="figure-img img-fluid" alt="Placeholder image in a figure.">
+
+    </div>
+    <div class="user-name">
+      {{user.firstname}} {{user.lastname}} 
+    </div>
+    <div class="email">
+      {{user.email}}
+    </div>
+  </div>
+  <ng-template #noData>Sorry no user found</ng-template>
+</div>

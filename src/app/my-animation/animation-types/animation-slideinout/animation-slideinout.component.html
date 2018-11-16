@@ -1,0 +1,29 @@
+<!-- <div class="main-content row">
+  <div class="col-md-4">
+      <button type="button" class="btn btn-primary" (click)="toggleSlide()">Toggle</button>
+  </div>
+  <div class="col-md-8" *ngIf="isSlideVisible" [@slideInOut]>
+    <div class="slide">
+      <div class="header">
+        <span>Slide Animations</span><span class="pull-right"><i class="fa fa-times" aria-hidden="true" (click)="toggleSlide()"></i></span>
+      </div>
+      <div class="content">
+        <p>This slide created based on angular animations</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="main-content row">
+    <div class="col-md-4">
+        <!-- <button type="button" class="btn btn-primary" (click)="toggleSlide()">Toggle</button> -->
+        <button (click)="toggleMenu()" class="hamburger">
+            <span>toggle menu</span>
+          </button>
+    </div>
+    <div class="col-md-8">
+        <!-- <div class="slides"> -->
+            
+            <app-animation-slide-menu [@slideInOut]="menuState"></app-animation-slide-menu>
+        <!-- </div> -->
+    </div>
+</div>

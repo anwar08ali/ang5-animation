@@ -17,14 +17,15 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    cursor: pointer;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
+.sidenav a.active-link{
+    color: #f1f1f1; 
+}
 /* Style page content */
 .main {
     margin-left: 160px; /* Same as the width of the sidebar */

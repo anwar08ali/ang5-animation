@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/users.service';
+import { FiltersService } from 'src/app/filters.service';
 
 @Component({
   selector: 'app-left-side-bar',
@@ -8,11 +8,12 @@ import { UsersService } from 'src/app/users.service';
 })
 export class LeftSideBarComponent implements OnInit {
 
-  constructor(private usersService: UsersService) { }
+  constructor(private filtersService: FiltersService) { }
 
   ngOnInit() {
   }
-  filterData(){
-    this.usersService.update();
+  filterData(filterObj){
+    this.filtersService.applyFilter(filterObj);
+    //this.filtersService.addFilterPill(filter);    
   }
 }

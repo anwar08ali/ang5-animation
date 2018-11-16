@@ -1,5 +1,6 @@
 <div class="container">
-    <p [@myAnimation]='state' (click)="animate()">Click to see the animation</p>            
+    <h2>Informations</h2>
+    <span class="filters" *ngFor="let pill of filters"><i class="fa fa-times" aria-hidden="true" (click)="removeFilter(pill)"></i>{{pill.key}} : {{pill.value}}</span>           
     <table class="table table-striped">
       <thead>
         <tr>
@@ -10,7 +11,7 @@
       </thead>
       <tbody>
         <tr *ngFor = "let user of userDetails" >
-          <td>{{user.firstname}}</td>
+          <td><a routerLink="/users/{{user.id}}">{{user.firstname}}</a></td>
           <td>{{user.lastname}}</td>
           <td>{{user.email}}</td>
         </tr>

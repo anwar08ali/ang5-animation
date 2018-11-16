@@ -1,0 +1,8 @@
+.user-image{
+    text-align: center;
+}
+.user-name,
+.email{
+    text-align: center;
+    font-weight: 600;
+}
